@@ -1,65 +1,75 @@
+using System;
 using System.Collections.Generic;
 
 namespace CastleGrimtol.Project
 {
   public class Game : IGame
   {
+    public Room Room1;
+    public Room Room2;
+    public Room Room3;
     public Room CurrentRoom { get; set; }
     public Player CurrentPlayer { get; set; }
 
     public void GetUserInput()
     {
-      throw new System.NotImplementedException();
+      string userInput = Console.ReadLine();
+
     }
 
     public void Go(string direction)
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Help()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Inventory()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Look()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Quit()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Reset()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void Setup()
     {
-      throw new System.NotImplementedException();
+
+      Room1.Exits.Add("east", Room2);
+      Room2.Exits.Add("west", Room1);
+      Room2.Exits.Add("north", Room3);
+      Room3.Exits.Add("south", Room2);
+
     }
 
     public void StartGame()
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void TakeItem(string itemName)
     {
-      throw new System.NotImplementedException();
+
     }
 
     public void UseItem(string itemName)
     {
-      throw new System.NotImplementedException();
+
     }
   }
 }
