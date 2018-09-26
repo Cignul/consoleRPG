@@ -5,7 +5,7 @@ namespace CastleGrimtol.Project
   public class Game : IGame
   {
     public Room CurrentRoom { get; set; }
-    public Player CurrentPlayer { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+    public Player CurrentPlayer { get; set; }
 
     public void GetUserInput()
     {
