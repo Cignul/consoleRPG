@@ -35,7 +35,15 @@ namespace CastleGrimtol.Project
                         Use <item");
 
       Console.WriteLine("What would you like to do?");
-      Console.ReadLine();
+      string userInput = Console.ReadLine();
+      if (userInput == "help" || userInput == "Help" || userInput == "HELP")
+      {
+        Help();
+      }
+      if (userInput == "look" || userInput == "Look" || userInput == "LOOK")
+      {
+        Look();
+      }
     }
 
     public void Inventory()
