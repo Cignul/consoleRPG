@@ -12,6 +12,7 @@ namespace CastleGrimtol.Project
     public Room CurrentRoom { get; set; }
     public Player CurrentPlayer { get; set; }
 
+
     public void GetUserInput()
     {
       string userInput = Console.ReadLine();
@@ -44,6 +45,7 @@ namespace CastleGrimtol.Project
       {
         Look();
       }
+      Console.WriteLine(CurrentRoom.Description);
     }
 
     public void Inventory()
@@ -69,7 +71,7 @@ namespace CastleGrimtol.Project
     public void Setup()
     {
       //add a better description
-      Room Room0 = new Room("Room0", "starting room");
+      Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within");
       Room Room1 = new Room("Room1", "this room is a real doozy");
       Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door");
       Room Room3 = new Room("Room3", "almost won you magnificient person, the room is very dark but there appears to be a light switch on your left.");
@@ -93,6 +95,7 @@ namespace CastleGrimtol.Project
       Setup();
 
       Console.WriteLine("Welcome to castle Grimtol, keep your head on a swivel");
+      Console.WriteLine(CurrentRoom.Description);
       Console.WriteLine("Use <Help> for a list of commands");
       string userInput = Console.ReadLine();
       if (userInput == "help" || userInput == "HELP" || userInput == "Help")
