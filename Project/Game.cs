@@ -61,11 +61,10 @@ namespace CastleGrimtol.Project
     public void Setup()
     {
       //add a better description
-
       Room Room0 = new Room("Room0", "starting room");
       Room Room1 = new Room("Room1", "this room is a real doozy");
-      Room Room2 = new Room("Room2", "stuff is getting real in this room");
-      Room Room3 = new Room("Room3", "almost won you magnificient bastard");
+      Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door");
+      Room Room3 = new Room("Room3", "almost won you magnificient person, the room is very dark but there appears to be a light switch on your left.");
       Room Room4 = new Room("Room4", "victory you did the thing");
       CurrentRoom = Room0;
       //adding room exit paths
