@@ -55,7 +55,6 @@ namespace CastleGrimtol.Project
 
     public void Look()
     {
-
     }
 
     public void Quit()
