@@ -110,7 +110,9 @@ namespace CastleGrimtol.Project
       }
       if (userInput == "go" || userInput == "Go" || userInput == "GO")
       {
-        Console.WriteLine(CurrentRoom.Exits);
+
+        //this is not the right value to print.. to string maybe
+        Console.WriteLine(CurrentRoom.Exits.Values);
       }
 
     }
