@@ -33,7 +33,7 @@ namespace CastleGrimtol.Project
                         Quit
                         Reset
                         Take <item>
-                        Use <item");
+                        Use <item>");
 
       Console.WriteLine("What would you like to do?");
       string userInput = Console.ReadLine();
@@ -107,6 +107,10 @@ namespace CastleGrimtol.Project
       {
         Console.WriteLine(CurrentRoom.Description);
         userInput = Console.ReadLine();
+      }
+      if (userInput == "go" || userInput == "Go" || userInput == "GO")
+      {
+        Console.WriteLine(CurrentRoom.Exits);
       }
 
     }
