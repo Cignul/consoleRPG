@@ -108,8 +108,10 @@ namespace CastleGrimtol.Project
         Console.WriteLine(CurrentRoom.Description);
         userInput = Console.ReadLine();
       }
-      if (userInput == "go" || userInput == "Go" || userInput == "GO")
+      if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
       {
+        // find out why no access to this even though constructed above
+        // CurrentRoom = Room0;
 
         //this is not the right value to print.. to string maybe
         Console.WriteLine(CurrentRoom.Exits.Values);
