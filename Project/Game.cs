@@ -98,6 +98,7 @@ namespace CastleGrimtol.Project
       Room3.Exits.Add("east", Room4);
       Room4.Exits.Add("west", Room3);
 
+      //adding item (Key) to this room for last locked door, maybe add a light switch we'll see
       Room3.Items.Add(item: key);
     }
 
@@ -133,7 +134,8 @@ namespace CastleGrimtol.Project
           //room is out of scope can't get access
           // find out why no access to this even though constructed above
           //need to write changeroom function?
-          //CurrentRoom = CurrentRoom.changeRoom(Room1);
+          //STUCK HERE
+          //Room1 = CurrentRoom;
 
           //this is not the right value to print.. to string maybe
           Console.WriteLine(CurrentRoom.Exits.ToString());
