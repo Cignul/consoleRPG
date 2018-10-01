@@ -76,7 +76,7 @@ namespace CastleGrimtol.Project
 
     public void Setup()
     {
-      System.Console.WriteLine("What is your name, adventurer?");
+      System.Console.WriteLine("What is your Name brave warrior?");
       var name = Console.ReadLine();
 
       _player = new Player(name);
@@ -130,7 +130,7 @@ namespace CastleGrimtol.Project
         }
         if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
         {
-          //room is out of scope can't get access here
+          //room is out of scope can't get access
           // find out why no access to this even though constructed above
           //need to write changeroom function?
           //CurrentRoom = CurrentRoom.changeRoom(Room1);
