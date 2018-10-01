@@ -8,6 +8,7 @@ namespace CastleGrimtol.Project
     //creating rooms for game
 
     //creating an object
+    bool playing = false;
     public Item key;
     public Room CurrentRoom { get; set; }
     public Player CurrentPlayer { get; set; }
@@ -21,7 +22,7 @@ namespace CastleGrimtol.Project
 
     public void Go(string direction)
     {
-
+      // CurrentRoom = CurrentRoom.Exits(Console.ReadLine(east));
     }
 
     public void Help()
@@ -55,20 +56,23 @@ namespace CastleGrimtol.Project
 
     public void Look()
     {
+      Console.WriteLine(CurrentRoom.Description);
     }
 
     public void Quit()
     {
-
+      Quit();
+      return;
     }
 
     public void Reset()
     {
-
+      StartGame();
     }
 
     public void Setup()
     {
+      playing = true;
       //add a better description
       Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within");
       Room Room1 = new Room("Room1", "this room is a real doozy");
@@ -92,33 +96,41 @@ namespace CastleGrimtol.Project
     public void StartGame()
     {
       Setup();
-
-      Console.WriteLine("Welcome to castle Grimtol, keep your head on a swivel");
-      Console.WriteLine(CurrentRoom.Description);
-      Console.WriteLine("Use <Help> for a list of commands");
-      string userInput = Console.ReadLine();
-      if (userInput == "help" || userInput == "HELP" || userInput == "Help")
+      while (playing)
       {
-        Help();
-        userInput = Console.ReadLine();
-      }
 
-      if (userInput == "look" || userInput == "LOOK" || userInput == "Look")
-      {
+        Console.WriteLine("Welcome to castle Grimtol, keep your head on a swivel");
         Console.WriteLine(CurrentRoom.Description);
-        userInput = Console.ReadLine();
-      }
-      if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
-      {
-        // find out why no access to this even though constructed above
-        // CurrentRoom = Room0;
+        Console.WriteLine("Use <Help> for a list of commands");
 
-        //this is not the right value to print.. to string maybe
-        Console.WriteLine(CurrentRoom.Exits.Values);
-      }
 
+        string userInput = Console.ReadLine();
+        if (userInput == "help" || userInput == "HELP" || userInput == "Help")
+        {
+          Help();
+          userInput = Console.ReadLine();
+        }
+
+        if (userInput == "look" || userInput == "LOOK" || userInput == "Look")
+        {
+          Console.WriteLine(CurrentRoom.Description);
+          userInput = Console.ReadLine();
+        }
+        if (userInput == "reset" || userInput == "RESET" || userInput == "Reset")
+        {
+          Reset();
+        }
+        if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
+        {
+          // find out why no access to this even though constructed above
+          // CurrentRoom = Room0;
+
+          //this is not the right value to print.. to string maybe
+          Console.WriteLine(CurrentRoom.Exits.Values);
+        }
+
+      }
     }
-
     public void TakeItem(string itemName)
     {
 
