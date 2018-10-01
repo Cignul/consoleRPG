@@ -61,8 +61,10 @@ namespace CastleGrimtol.Project
 
     public void Quit()
     {
+      //this is default stack overflow error message, probably a better function to call.
       Quit();
       return;
+
     }
 
     public void Reset()
@@ -123,10 +125,15 @@ namespace CastleGrimtol.Project
         if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
         {
           // find out why no access to this even though constructed above
-          //CurrentRoom = Room0;
+          //need to write changeroom function?
+          //CurrentRoom = CurrentRoom.changeRoom(Room1);
 
           //this is not the right value to print.. to string maybe
           Console.WriteLine(CurrentRoom.Exits.ToString());
+        }
+        if (userInput == "quit" || userInput == "QUIT" || userInput == "Quit")
+        {
+          Quit();
         }
 
       }
