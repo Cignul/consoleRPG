@@ -53,12 +53,13 @@ namespace CastleGrimtol.Project
 
     public void Inventory()
     {
-
+      Console.WriteLine(CurrentPlayer.Inventory);
     }
 
     public void Look()
     {
       Console.WriteLine(CurrentRoom.Description);
+      Console.WriteLine(CurrentRoom.Items);
     }
 
     public void Quit()
@@ -135,7 +136,7 @@ namespace CastleGrimtol.Project
           // find out why no access to this even though constructed above
           //need to write changeroom function?
           //STUCK HERE
-          //Room1 = CurrentRoom;
+          // Room1 = CurrentRoom;
 
           //this is not the right value to print.. to string maybe
           Console.WriteLine(CurrentRoom.Exits.ToString());
