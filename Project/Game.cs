@@ -8,7 +8,9 @@ namespace CastleGrimtol.Project
     //creating rooms for game
 
     //creating an object
+
     bool playing = false;
+    Player _player;
     public Item key;
     public Room CurrentRoom { get; set; }
     public Player CurrentPlayer { get; set; }
@@ -74,6 +76,10 @@ namespace CastleGrimtol.Project
 
     public void Setup()
     {
+      System.Console.WriteLine("What is your Name brave warrior?");
+      var name = Console.ReadLine();
+
+      _player = new Player(name);
       playing = true;
       //add a better description
       Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
@@ -101,7 +107,7 @@ namespace CastleGrimtol.Project
       while (playing)
       {
 
-        Console.WriteLine("Welcome to castle Grimtol, keep your head on a swivel");
+        Console.WriteLine($"Welcome to castle Grimtol, {_player.name}. Keep your head on a swivel");
         Console.WriteLine(CurrentRoom.Description);
         Console.WriteLine("Use <Help> for a list of commands");
 
