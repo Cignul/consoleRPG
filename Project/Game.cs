@@ -74,9 +74,9 @@ namespace CastleGrimtol.Project
     {
       playing = true;
       //add a better description
-      Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within");
-      Room Room1 = new Room("Room1", "this room is a real doozy");
-      Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door");
+      Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
+      Room Room1 = new Room("Room1", "this room is a real doozy, there appears to be a giant pit to the west.  There is a door to the east");
+      Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door to the north");
       Room Room3 = new Room("Room3", "almost won you magnificient person, the room is very dark but there appears to be a light switch on your left.");
       Room Room4 = new Room("Room4", "victory you did the thing");
       CurrentRoom = Room0;
@@ -123,10 +123,10 @@ namespace CastleGrimtol.Project
         if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
         {
           // find out why no access to this even though constructed above
-          // CurrentRoom = Room0;
+          //CurrentRoom = Room0;
 
           //this is not the right value to print.. to string maybe
-          Console.WriteLine(CurrentRoom.Exits.Values);
+          Console.WriteLine(CurrentRoom.Exits.ToString());
         }
 
       }
