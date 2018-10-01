@@ -79,11 +79,12 @@ namespace CastleGrimtol.Project
     {
       System.Console.WriteLine("What is your Name brave warrior?");
       var name = Console.ReadLine();
+      Console.WriteLine();
 
       _player = new Player(name);
       playing = true;
       //add a better description
-      Room Room0 = new Room("Room0", "you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
+      Room Room0 = new Room("Room0", $"Welcome to castle Grimtol {_player}. Keep your head on a swivel, you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
       Room Room1 = new Room("Room1", "this room is a real doozy, there appears to be a giant pit to the west.  There is a door to the east");
       Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door to the north");
       Room Room3 = new Room("Room3", "almost won you magnificient person, the room is very dark but there appears to be a light switch on your left.");
@@ -101,19 +102,11 @@ namespace CastleGrimtol.Project
 
       //adding item (Key) to this room for last locked door, maybe add a light switch we'll see
       Room3.Items.Add(item: key);
-    }
-
-    public void StartGame()
-    {
-      Setup();
       while (playing)
       {
 
-        Console.WriteLine($"Welcome to castle Grimtol, {_player}. Keep your head on a swivel");
         Console.WriteLine(CurrentRoom.Description);
         Console.WriteLine("Use <Help> for a list of commands");
-
-
         string userInput = Console.ReadLine();
         if (userInput == "help" || userInput == "HELP" || userInput == "Help")
         {
@@ -130,27 +123,29 @@ namespace CastleGrimtol.Project
         {
           Reset();
         }
-        if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH")
+        if (userInput == "go north" || userInput == "Go North" || userInput == "GO NORTH" || userInput == "gonorth")
         {
-          //room is out of scope can't get access
-          // find out why no access to this even though constructed above
-          //need to write changeroom function?
-          //STUCK HERE
-          // Room1 = CurrentRoom;
-
-          //this is not the right value to print.. to string maybe
-          Console.WriteLine(CurrentRoom.Exits.ToString());
+          //ITS NOT CHANGING THE ROOM
+          Room1 = CurrentRoom;
+          Console.WriteLine(CurrentRoom.Description);
+          Console.WriteLine("test am i getting here?!?!?!/");
+          Console.WriteLine("VVV should be same VVV");
+          Console.WriteLine(Room1.Description);
+          //making sure it's updating current room
         }
         if (userInput == "quit" || userInput == "QUIT" || userInput == "Quit")
         {
           Quit();
         }
-        else
-        {
-          Console.WriteLine("invalid command, try something else");
-        }
 
       }
+
+    }
+    public void StartGame()
+    {
+      Setup();
+
+
     }
     public void TakeItem(string itemName)
     {
