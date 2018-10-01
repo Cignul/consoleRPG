@@ -107,7 +107,7 @@ namespace CastleGrimtol.Project
       while (playing)
       {
 
-        Console.WriteLine($"Welcome to castle Grimtol, {_player.name}. Keep your head on a swivel");
+        Console.WriteLine($"Welcome to castle Grimtol, {_player}. Keep your head on a swivel");
         Console.WriteLine(CurrentRoom.Description);
         Console.WriteLine("Use <Help> for a list of commands");
 
