@@ -40,14 +40,7 @@ namespace CastleGrimtol.Project
 
       Console.WriteLine("What would you like to do?");
       string userInput = Console.ReadLine();
-      // if (userInput == "help" || userInput == "Help" || userInput == "HELP")
-      // {
-      //   Help();
-      // }
-      // if (userInput == "look" || userInput == "Look" || userInput == "LOOK")
-      // {
-      //   Look();
-      // }
+
       Console.WriteLine(CurrentRoom.Description);
     }
 
