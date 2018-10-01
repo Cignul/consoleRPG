@@ -121,7 +121,7 @@ namespace CastleGrimtol.Project
           //ITS NOT CHANGING THE ROOM
           Room1 = CurrentRoom;
           Console.WriteLine(CurrentRoom.Description);
-          Console.WriteLine("test am i getting here?!?!?!/");
+          Console.WriteLine("test am i getting here?!?!?!");
           Console.WriteLine("VVV should be same VVV");
           Console.WriteLine(Room1.Description);
           //making sure it's updating current room
