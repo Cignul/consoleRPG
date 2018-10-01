@@ -24,7 +24,7 @@ namespace CastleGrimtol.Project
 
     public void Go(string direction)
     {
-      // CurrentRoom = CurrentRoom.Exits(Console.ReadLine(east));
+      // CurrentRoom = CurrentRoom.Exits(Console.ReadLine("east"));
     }
 
     public void Help()
@@ -40,14 +40,14 @@ namespace CastleGrimtol.Project
 
       Console.WriteLine("What would you like to do?");
       string userInput = Console.ReadLine();
-      if (userInput == "help" || userInput == "Help" || userInput == "HELP")
-      {
-        Help();
-      }
-      if (userInput == "look" || userInput == "Look" || userInput == "LOOK")
-      {
-        Look();
-      }
+      // if (userInput == "help" || userInput == "Help" || userInput == "HELP")
+      // {
+      //   Help();
+      // }
+      // if (userInput == "look" || userInput == "Look" || userInput == "LOOK")
+      // {
+      //   Look();
+      // }
       Console.WriteLine(CurrentRoom.Description);
     }
 
@@ -144,8 +144,6 @@ namespace CastleGrimtol.Project
     public void StartGame()
     {
       Setup();
-
-
     }
     public void TakeItem(string itemName)
     {
