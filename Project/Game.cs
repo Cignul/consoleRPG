@@ -14,6 +14,7 @@ namespace CastleGrimtol.Project
 
     public Room CurrentRoom { get; set; }
     public Player CurrentPlayer { get; set; }
+    Item key = new Item("key", "a silver key");
 
 
     public void GetUserInput()
