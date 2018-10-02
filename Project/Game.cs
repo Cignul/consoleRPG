@@ -76,8 +76,8 @@ namespace CastleGrimtol.Project
 
       _player = new Player(name);
       playing = true;
-      //add a better description
-      Room Room0 = new Room("Room0", $"Welcome to castle Grimtol {_player}. Keep your head on a swivel, you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
+      //add a better description _player not coming in right..
+      Room Room0 = new Room("Room0", $"Welcome to castle Grimtol {_player.ToString()}. Keep your head on a swivel, you find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
       Room Room1 = new Room("Room1", "this room is a real doozy, there appears to be a giant pit to the west.  There is a door to the east");
       Room Room2 = new Room("Room2", "stuff is getting real in this room, there is a locked door to the north");
       Room Room3 = new Room("Room3", "almost won you magnificient person, the room is very dark but there appears to be a light switch on your left.");
