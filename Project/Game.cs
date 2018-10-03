@@ -78,7 +78,7 @@ namespace CastleGrimtol.Project
       Room Room0 = new Room("Room0", $"Welcome to castle Grimtol {name}. Keep your head on a swivel. \n You find yourself in the entry plaza of the castle, a cold air eminates from within, there appears to be a door to the north");
       Room Room1 = new Room("Room1", "this room looks treacherous, there appears to be a pit to the west, descending into darkness.  You faintly discern a door to the east");
       Room Room2 = new Room("Room2", "You find yourself in a room where the walls and ceiling are completely covered in mirrored glass.\n  You notice rectangular cracks to the north that resemble the shape of a doorway");
-      Room Room3 = new Room("Room3", "You barely make out light ahead, , there is a locked door to the north. \n However, there appears to be a table with a key on it.  Someone wasn't paying attention to security, apparently.");
+      Room Room3 = new Room("Room3", "You barely discern light ahead, , there is a locked door to the north. \n However, there appears to be a table with a key on it.  Someone wasn't paying attention to security, apparently.");
       Room Room4 = new Room("Room4", "You see a passage that leads to daylight, your journey is complete. Congratulations!!");
       Room Pit = new Room("Pit", "you fall about 20 feet and are impaled by pungee sticks, your journey ends here...");
       CurrentRoom = Room0;
